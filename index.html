@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huzaifa — Web Developer for F&B & Wellness Businesses</title>
+    <meta name="description" content="I build fast, beautiful websites for restaurants, cafes, salons and clinics in Malaysia. Mobile-first. Affordable. Ready in 7 days.">
+    <meta property="og:title" content="Huzaifa — Web Developer">
+    <meta property="og:description" content="Fast, beautiful websites for Malaysian businesses. Starting from RM 500.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Figtree:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="progress-bar"></div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <span class="mobile-nav-close" onclick="closeMobileNav()">✕</span>
+        <a href="#about" onclick="closeMobileNav()">About</a>
+        <a href="#services" onclick="closeMobileNav()">Services</a>
+        <a href="#projects" onclick="closeMobileNav()">Work</a>
+        <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+        <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    </div>
+
+    <nav>
+        <a href="#hero" class="nav-logo">Huzaifa<span>.</span></a>
+        <div class="nav-center">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#projects" class="nav-link">Work</a>
+            <a href="#testimonials" class="nav-link">Reviews</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle" id="themeToggle" role="button" aria-label="Toggle dark mode" tabindex="0"></div>
+            <a href="#contact" class="btn-hire">Hire me</a>
+            <div class="hamburger" onclick="openMobileNav()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-status">
+                    <div class="hero-status-dot"></div>
+                    Available for new projects · Based in PJ, Malaysia
+                </div>
+                <h1>
+                    Websites that turn<br>
+                    <span class="accent">visitors into</span><br>
+                    <span class="italic">paying customers</span>
+                </h1>
+                <p class="hero-sub">
+                    I build fast, mobile-first websites for restaurants, cafes, salons, and clinics across Malaysia. Clean design, WhatsApp-ready, live in 7 days.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/60XXXXXXXXX?text=Hi%20Huzaifa,%20I%20need%20a%20website%20for%20my%20business" class="btn-primary" target="_blank">💬 WhatsApp me now</a>
+                    <a href="#projects" class="btn-outline">See my work →</a>
+                </div>
+                <div class="hero-stats">
+                    <div><div class="hero-stat-num">7</div><div class="hero-stat-label">Days avg. delivery</div></div>
+                    <div><div class="hero-stat-num">RM 500</div><div class="hero-stat-label">Starting price</div></div>
+                    <div><div class="hero-stat-num">3×</div><div class="hero-stat-label">Free revisions</div></div>
+                    <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Mobile-first</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal">
+                    <div class="label">About me</div>
+                    <h2 class="section-title">A developer who<br>understands business</h2>
+                    <div style="height:1.5rem"></div>
+                    <p>I'm <strong>Huzaifa</strong>, a frontend developer and Software Engineering student based in Petaling Jaya. I specialise in building websites for local Malaysian businesses — restaurants, cafes, salons, and clinics — that actually bring in customers.</p>
+                    <p>I understand what Malaysian customers look for when they search for a restaurant or book a salon visit. That means I build sites with <strong>WhatsApp buttons</strong>, mobile-fast loading, clear menus, and Grab/Foodpanda links — not just pretty pages.</p>
+                    <p>You deal directly with me. No agency overhead. No miscommunication. Just a website you're proud of, delivered on time.</p>
+                    <div class="skill-groups">
+                        <div>
+                            <div class="skill-group-label">Core skills</div>
+                            <div class="skill-pills">
+                                <span class="pill">HTML & CSS</span>
+                                <span class="pill">JavaScript</span>
+                                <span class="pill">PHP</span>
+                                <span class="pill">MySQL</span>
+                                <span class="pill">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skill-group-label">Tools & workflow</div>
+                            <div class="skill-pills">
+                                <span class="pill">Figma</span>
+                                <span class="pill">Git & GitHub</span>
+                                <span class="pill">v0.dev</span>
+                                <span class="pill">Bolt.new</span>
+                                <span class="pill">Netlify</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skill-group-label">Specialities</div>
+                            <div class="skill-pills">
+                                <span class="pill">WhatsApp API</span>
+                                <span class="pill">Mobile-First</span>
+                                <span class="pill">SEO Basics</span>
+                                <span class="pill">Page Speed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <div class="about-card">
+                        <div class="about-avatar-wrap">
+                            <div class="about-avatar">H</div>
+                            <div>
+                                <div class="about-name">Huzaifa</div>
+                                <div class="about-role">Frontend Developer</div>
+                            </div>
+                        </div>
+                        <div class="card-facts">
+                            <div class="card-fact"><span class="fact-key">Location</span><span class="fact-val">Petaling Jaya, Malaysia 🇲🇾</span></div>
+                            <div class="card-fact"><span class="fact-key">Education</span><span class="fact-val">Aptech Computer Education</span></div>
+                            <div class="card-fact"><span class="fact-key">Languages</span><span class="fact-val">English, Urdu, Malay</span></div>
+                            <div class="card-fact"><span class="fact-key">Delivery time</span><span class="fact-val">5–7 days</span></div>
+                            <div class="card-fact"><span class="fact-key">Revisions</span><span class="fact-val">3 rounds included</span></div>
+                            <div class="card-fact"><span class="fact-key">Availability</span><span class="fact-val"><span class="available-badge">Open for work</span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="services-header reveal">
+                <div><div class="label">What I offer</div><h2 class="section-title">Services &amp; pricing</h2></div>
+                <p class="section-desc">Simple, transparent packages. No hidden fees. You know exactly what you're getting before you pay anything.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🍜</div>
+                    <div class="service-label">F&B</div>
+                    <h3>Restaurant &amp; Cafe Website</h3>
+                    <p>Everything a restaurant needs online — menu, photos, location, and a WhatsApp order button that works from day one.</p>
+                    <ul class="service-includes">
+                        <li>Digital menu with photos</li>
+                        <li>WhatsApp order/reservation button</li>
+                        <li>Google Maps embed</li>
+                        <li>Operating hours</li>
+                        <li>Mobile-optimised design</li>
+                        <li>Grab/Foodpanda links</li>
+                    </ul>
+                    <div class="service-price">From RM 500</div>
+                    <div class="service-delivery">Ready in 5–7 days</div>
+                </div>
+                <div class="service-card featured reveal reveal-delay-1">
+                    <div class="service-icon">💆</div>
+                    <div class="service-label">Most popular</div>
+                    <h3>Salon, Spa &amp; Beauty Studio</h3>
+                    <p>A beautiful, trust-building site that shows off your work and converts visitors into booked appointments — no phone tag needed.</p>
+                    <ul class="service-includes">
+                        <li>Services &amp; pricing table</li>
+                        <li>Before/after photo gallery</li>
+                        <li>WhatsApp booking button</li>
+                        <li>Staff/team profiles</li>
+                        <li>Instagram feed embed</li>
+                        <li>Google review display</li>
+                    </ul>
+                    <div class="service-price">From RM 600</div>
+                    <div class="service-delivery">Ready in 5–7 days</div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon">🏥</div>
+                    <div class="service-label">Healthcare</div>
+                    <h3>Clinic &amp; Wellness Website</h3>
+                    <p>A professional, trustworthy site that helps patients find you on Google and book appointments with confidence.</p>
+                    <ul class="service-includes">
+                        <li>Doctor &amp; staff profiles</li>
+                        <li>Services &amp; conditions list</li>
+                        <li>Appointment booking form</li>
+                        <li>Location &amp; directions</li>
+                        <li>Insurance panel info</li>
+                        <li>Bilingual (EN/BM) option</li>
+                    </ul>
+                    <div class="service-price">From RM 700</div>
+                    <div class="service-delivery">Ready in 7 days</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="reveal"><div class="label">My work</div><h2 class="section-title">Recent projects</h2></div>
+            <div class="projects-grid">
+                <div class="project-card wide reveal">
+                    <div class="project-thumb thumb-1">🍛<div class="project-type-badge">Restaurant · PJ, Malaysia</div></div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span><span class="project-tag">JavaScript</span><span class="project-tag">WhatsApp API</span><span class="project-tag">Google Maps</span>
+                        </div>
+                        <h3>Nasi Lemak Royale — Restaurant Landing Page</h3>
+                        <p>A local PJ restaurant was losing customers because they had no online presence. I built a fast, mobile-first landing page with a digital menu, WhatsApp order button, and Google Maps embed.</p>
+                        <div class="project-result">📈 WhatsApp orders started week one</div>
+                        <a href="#" class="project-link">View live site →</a>
+                    </div>
+                </div>
+                <div class="project-card reveal reveal-delay-1">
+                    <div class="project-thumb thumb-2">💅<div class="project-type-badge">Beauty · KL</div></div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span><span class="project-tag">Gallery</span><span class="project-tag">Booking Form</span>
+                        </div>
+                        <h3>Aura Beauty Studio — Salon Booking Site</h3>
+                        <p>A beauty studio in KL needed a site that matched the quality of their work. I built an elegant site with a before/after gallery and a WhatsApp booking CTA.</p>
+                        <div class="project-result">📈 2× bookings in 30 days</div>
+                        <a href="#" class="project-link">View live site →</a>
+                    </div>
+                </div>
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-thumb thumb-3">🏥<div class="project-type-badge">Healthcare · Subang</div></div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span><span class="project-tag">PHP Form</span><span class="project-tag">Bilingual</span>
+                        </div>
+                        <h3>HealthFirst Klinik — Medical Landing Page</h3>
+                        <p>A family clinic wanted to rank on Google and reduce phone calls. I built a bilingual site with an appointment form and services list.</p>
+                        <div class="project-result">📈 More walk-ins from Google Search</div>
+                        <a href="#" class="project-link">View live site →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <div class="reveal" style="text-align:center;max-width:500px;margin:0 auto 3.5rem">
+                <div class="label" style="justify-content:center">Reviews</div>
+                <h2 class="section-title">What clients say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testi-card reveal">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Huzaifa built our restaurant website in under a week. The WhatsApp button alone has brought us so many new orders."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar av-1">AR</div>
+                        <div><div class="testi-name">Ahmad Razif</div><div class="testi-role">Owner, Nasi Lemak Royale · PJ</div></div>
+                    </div>
+                </div>
+                <div class="testi-card reveal reveal-delay-1">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"He understood exactly what I wanted — something that looks premium and shows off our work. The before/after gallery is perfect."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar av-2">SL</div>
+                        <div><div class="testi-name">Sarah Lim</div><div class="testi-role">Founder, Aura Beauty Studio · KL</div></div>
+                    </div>
+                </div>
+                <div class="testi-card reveal reveal-delay-2">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Very professional and patient. He explained everything clearly and the bilingual feature was exactly what our patients needed."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar av-3">DK</div>
+                        <div><div class="testi-name">Dr. Kumar</div><div class="testi-role">Director, HealthFirst Klinik · Subang</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="label">Get in touch</div>
+        <h2 class="section-title">Let's build your website</h2>
+        <p>Tell me about your business and what you need. I'll reply within 2 hours on WhatsApp, or by the next morning via email. No commitment needed for the first conversation.</p>
+
+        <div class="contact-methods">
+          <a href="https://wa.me/60XXXXXXXXX" class="contact-method" target="_blank">
+            <div class="contact-method-icon">💬</div>
+            <div class="contact-method-text">
+              <div class="contact-method-label">WhatsApp (fastest)</div>
+              <div class="contact-method-value">+60 XX-XXXX XXXX</div>
+            </div>
+          </a>
+          <a href="mailto:hello@huzaifa.dev" class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <div class="contact-method-text">
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">hello@huzaifa.dev</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" class="contact-method" target="_blank">
+            <div class="contact-method-icon">💼</div>
+            <div class="contact-method-text">
+              <div class="contact-method-label">LinkedIn</div>
+              <div class="contact-method-value">linkedin.com/in/yourprofile</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <!-- ✅ FORM START -->
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          
+          <!-- hidden input (REQUIRED) -->
+          <input type="hidden" name="form-name" value="contact">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your name</label>
+              <input type="text" name="name" placeholder="Ahmad Razif" required>
+            </div>
+            <div class="form-group">
+              <label>Business name</label>
+              <input type="text" name="business" placeholder="My Restaurant Sdn Bhd">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" name="email" placeholder="hello@yourbusiness.com" required>
+          </div>
+
+          <div class="form-group">
+            <label>Business type</label>
+            <select name="type">
+              <option value="">Select your business type</option>
+              <option>Restaurant / Cafe / F&B</option>
+              <option>Salon / Beauty / Spa</option>
+              <option>Clinic / Healthcare / Wellness</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tell me what you need</label>
+            <textarea name="message" placeholder="I run a restaurant in PJ and need a website with our menu, location, and WhatsApp ordering..."></textarea>
+          </div>
+
+          <!-- ✅ FIXED BUTTON -->
+          <button type="submit" class="btn-submit">Send message →</button>
+
+          <div class="form-divider">or contact me directly</div>
+
+          <a href="https://wa.me/60XXXXXXXXX?text=Hi%20Huzaifa,%20I%20just%20submitted%20a%20form%20on%20your%20website" class="wa-btn" target="_blank">
+            💬 Chat on WhatsApp
+          </a>
+
+          <p class="form-note">I reply within 2 hours during business hours (9am–10pm MYT)</p>
+
+        </form>
+        <!-- ✅ FORM END -->
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">Huzaifa<span style="color:var(--accent)">.</span></span>
+            <span>© 2026 · Petaling Jaya, Malaysia</span>
+            <div class="footer-links">
+                <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
