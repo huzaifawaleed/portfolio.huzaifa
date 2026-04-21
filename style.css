@@ -273,6 +273,91 @@ h2.section-title {
 /* ═══════════════════════════════════════
    HERO
 ═══════════════════════════════════════ */
+
+
+
+
+
+/* HERO LAYOUT */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* RIGHT SIDE */
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SVG WRAPPER */
+.circle-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* SVG */
+.hero-svg {
+  width: 100%;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 15px 40px rgba(0,0,0,0.15));
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-visual {
+    margin-top: 40px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #hero {
   min-height: 100vh;
   display: flex;
