@@ -223,224 +223,71 @@ nav {
   color: var(--text-2);
 }
 
-/* ═══════════════════════════════════════
-   LAYOUT
-═══════════════════════════════════════ */
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 2rem;
+/* ── Hero Grid Layout ── */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Gives text slightly more room */
+    align-items: center;
+    gap: 3rem;
 }
 
-section { padding: 7rem 0; }
-
-.label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
+.hero-visual {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: fadeUp 0.5s 0.3s ease both;
 }
 
-.label::before {
-  content: '';
-  width: 16px; height: 1px;
-  background: var(--accent);
+.hero-svg {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    /* This ensures the SVG matches your text color or accent color */
+    color: var(--accent); 
+    filter: drop-shadow(0 20px 40px rgba(26, 107, 255, 0.1));
+    animation: floating 6s ease-in-out infinite;
 }
 
-h2.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  color: var(--text-1);
-  margin-bottom: 1rem;
+/* ── Dark Mode Adjustment ── */
+[data-theme="dark"] .hero-svg {
+    /* Slightly lighter/softer color for dark mode eyes */
+    color: color-mix(in srgb, var(--accent) 80%, white);
+    filter: drop-shadow(0 20px 40px rgba(26, 107, 255, 0.2));
 }
 
-.section-desc {
-  font-size: 1.05rem;
-  color: var(--text-2);
-  font-weight: 300;
-  max-width: 480px;
-  line-height: 1.7;
+/* ── Subtle Animation ── */
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-/* ═══════════════════════════════════════
-   HERO
-═══════════════════════════════════════ */
-#hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8rem 0 5rem;
-  position: relative;
-  overflow: hidden;
+/* ── Responsiveness ── */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr; /* Stack vertically on tablet/mobile */
+        text-align: left;
+        gap: 2rem;
+    }
+
+    .hero-visual {
+        justify-content: flex-start;
+        order: -1; /* Puts SVG above text on mobile for better visual hook */
+    }
+
+    .hero-svg {
+        max-width: 250px; /* Smaller on mobile devices */
+    }
+
+    h1 {
+        font-size: clamp(2.4rem, 8vw, 3.5rem);
+    }
 }
 
-/* Grid background */
-#hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 72px 72px;
-  opacity: 0.5;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 100%);
-}
-
-/* Accent blob */
-#hero::after {
-  content: '';
-  position: absolute;
-  top: -10%;
-  right: -5%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--green-bg);
-  border: 1px solid color-mix(in srgb, var(--green) 30%, transparent);
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 500;
-  padding: 5px 12px;
-  border-radius: 50px;
-  margin-bottom: 2rem;
-  animation: fadeUp 0.5s ease both;
-}
-
-.hero-status-dot {
-  width: 7px; height: 7px;
-  background: var(--green);
-  border-radius: 50%;
-  animation: blink 2s ease-in-out infinite;
-}
-
-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 1.08;
-  color: var(--text-1);
-  max-width: 800px;
-  animation: fadeUp 0.5s 0.1s ease both;
-}
-
-h1 .accent { color: var(--accent); }
-
-h1 .italic {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--text-2);
-}
-
-.hero-sub {
-  font-size: 1.15rem;
-  color: var(--text-2);
-  font-weight: 300;
-  max-width: 520px;
-  margin: 1.75rem 0 2.5rem;
-  line-height: 1.7;
-  animation: fadeUp 0.5s 0.2s ease both;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  animation: fadeUp 0.5s 0.3s ease both;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 500;
-  padding: 0.8rem 1.75rem;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-
-.btn-primary:hover {
-  background: var(--accent-2);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 35%, transparent);
-}
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  color: var(--text-1);
-  font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 400;
-  padding: 0.8rem 1.75rem;
-  border-radius: 50px;
-  border: 1px solid var(--border-2);
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-
-.btn-outline:hover {
-  border-color: var(--text-2);
-  background: var(--bg-2);
-}
-
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin-top: 4rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border);
-  animation: fadeUp 0.5s 0.4s ease both;
-  flex-wrap: wrap;
-}
-
-.hero-stat-num {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--text-1);
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.hero-stat-label {
-  font-size: 13px;
-  color: var(--text-3);
-  font-weight: 300;
+@media (max-width: 480px) {
+    .hero-stats {
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
 }
 
 /* ═══════════════════════════════════════
