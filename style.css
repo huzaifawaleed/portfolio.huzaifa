@@ -311,6 +311,84 @@ h2.section-title {
 .hero-inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HERO VISUAL ── */
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 460px;
+}
+
+.hero-visual-blob {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 10%, transparent) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-visual-ring {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--accent-border);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 18s linear infinite;
+  pointer-events: none;
+}
+
+.svg-float {
+  animation: float 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 20px 40px color-mix(in srgb, var(--accent) 15%, transparent));
+}
+
+.hero-svg {
+  width: 260px;
+  height: auto;
+  fill: var(--text-1);
+  transition: fill 0.4s ease;
+}
+
+.hero-visual:hover .hero-svg {
+  fill: var(--accent);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .hero-status {
@@ -1178,6 +1256,41 @@ footer {
 @media (max-width: 900px) {
   .nav-center { display: none; }
   .hamburger { display: flex; }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  h1 { text-align: center; }
+
+  .hero-sub { text-align: center; }
+
+  .hero-actions { justify-content: center; }
+
+  .hero-stats { justify-content: center; }
+
+  .hero-visual {
+    min-height: 280px;
+    order: -1;
+  }
+
+  .hero-visual-blob {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-visual-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-svg { width: 180px; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-card { position: static; }
